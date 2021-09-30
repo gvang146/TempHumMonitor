@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MMTechApp.Views.LoginPage"
+             BackgroundImage="ColorLogoP3.png">
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterLayout">
+            <StackLayout x:Name="Logos">
+                <Frame BackgroundColor="Green" Padding="24" CornerRadius="0">
+                    <Label Text="MMTechApp" 
+                           HorizontalTextAlignment="Center" 
+                           TextColor="White" 
+                           FontSize="36"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="LoginEntries">
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness">
+                        <OnIdiom.Phone>35,0,35,0</OnIdiom.Phone>
+                        <OnIdiom.Tablet>135,145,135,0</OnIdiom.Tablet>
+                    </OnIdiom>
+                </StackLayout.Padding>
+
+                <Label x:Name ="userName" 
+                       Text="Username"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center" />
+                <Entry x:Name="enUsername" 
+                       Placeholder="Username" />
+                <Label x:Name ="passWord" 
+                       Text="Password"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+                <Entry x:Name="enPassword"
+                       Placeholder="Password"
+                       />
+                <Button x:Name="login" 
+                        Text="Login"
+                        Clicked="LoginProcedure"
+                        />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

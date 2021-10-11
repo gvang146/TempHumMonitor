@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MMTechNodeAPI.Data;
 using MMTechNodeAPI.Models;
-//PLC programmable logic controller - controlled by PLC
+
 namespace MMTechNodeAPI.Controllers
 {
     [ApiController]

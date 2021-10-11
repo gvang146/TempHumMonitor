@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MMTechNodeAPI.Data;
 using MMTechNodeAPI.Models;
-
+//PLC programmable logic controller - controlled by PLC
 namespace MMTechNodeAPI.Controllers
 {
     [ApiController]
@@ -78,6 +78,7 @@ namespace MMTechNodeAPI.Controllers
         
         //PUT: updates existing ID and throws exceptions
         //when multiple updates crash into each other
+        //ASync is like multi-threading, it does not need to wait for one to finish, both functions could work simultanously
         [HttpPut(template:"{Id}")]
         public async Task<ActionResult<Sensor>> UpdateSensor(Sensor sensor)
         {

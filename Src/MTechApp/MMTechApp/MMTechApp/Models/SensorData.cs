@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace MMTechApp.Models
-{
+{   // sensor data for storage
     class SensorData
     {
         public Guid Id { get; set; }

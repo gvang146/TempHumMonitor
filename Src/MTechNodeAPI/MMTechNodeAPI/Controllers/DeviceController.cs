@@ -8,7 +8,7 @@ using MMTechNodeAPI.Data;
 using MMTechNodeAPI.Models;
 
 namespace MMTechNodeAPI.Controllers
-{
+{ // controller to access device
     [ApiController]
     [Route("api/[controller]")]
     public class DeviceController : ControllerBase
@@ -19,7 +19,7 @@ namespace MMTechNodeAPI.Controllers
         {
             _context = context;
         }
-        
+        //Get the id of device for identification
         [HttpGet("{id}")]
         public async Task<ActionResult<Device>> GetDevice(Guid id)
         {
@@ -30,7 +30,7 @@ namespace MMTechNodeAPI.Controllers
 
             return device;
         }
-
+        //Get Id of user for identification
         [HttpGet("user/{id}")]
         public async Task<ActionResult<IEnumerable<Device>>> GetUserDevices(Guid id)
         {
@@ -40,7 +40,7 @@ namespace MMTechNodeAPI.Controllers
 
             return devices;
         }
-
+        // get id of data for identification
         [HttpGet("data/{id}")]
         public async Task<ActionResult<object>> GetDeviceData(Guid id)
         {
@@ -91,7 +91,7 @@ namespace MMTechNodeAPI.Controllers
                 Sensors = sensorDataList
             };
         }
-
+        // POST: add onto 
         [HttpPost]
         public async Task<ActionResult<Device>> AddDevice(Device device)
         {

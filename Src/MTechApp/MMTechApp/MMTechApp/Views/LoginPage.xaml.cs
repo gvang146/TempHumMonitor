@@ -19,7 +19,7 @@ namespace MMTechApp.Views
         {
             InitializeComponent();
         }
-
+        // async functions runs synchronously until it reaches the first "await"
         private async void LoginProcedure(object sender, EventArgs e)
         {
             //assigning entered user and pass to local for identification

@@ -7,6 +7,10 @@ using Microsoft.EntityFrameworkCore;
 using MMTechNodeAPI.Data;
 using MMTechNodeAPI.Models;
 
+//We used Postgres DB because its free and were not planning to build a complex database where it would require enterprise DB.
+//Every minute of the data getting read, gets pushed up to the web service,
+//to be accessed and displayed when called
+
 namespace MMTechNodeAPI.Controllers
 {
     [ApiController]
@@ -45,13 +49,11 @@ namespace MMTechNodeAPI.Controllers
             {
                 num = 1;
             }
-            
             var sensorDate = await _context.SensorData
                 .Where(d => d.SensorId == sensorId)
                 .OrderByDescending(d => d.TimeRecord)
                 .Take(num)
                 .ToListAsync();
-
             return sensorDate;
         }
 

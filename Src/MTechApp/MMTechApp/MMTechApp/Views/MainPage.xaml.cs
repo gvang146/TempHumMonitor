@@ -10,6 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+// TEMPERATURE SERVICE DEPLOYED ON A RASPBERRY PI
+// WEB SERVICE IS DEPLOYED A PRIVATE CLOUD
+// SENSORS AND MOBILE APPLICATION COMMUNICATES THROUGH THE WEB SERIVCE,
+// WEB SERVICE COMMUNICATES WITH DB 
+// SENSORS SENDS DATA TO WEB SERVICE, WEB SERIVCE STORES IT IN DB
+// MOBILE APP CALLS WEB SERVICE AND THEN IT GETS THE DATA FROM DB AND BRING IT BACK TO MOBILE APP FOR DISPLAY
+
 namespace MMTechApp
 {
     public partial class MainPage : ContentPage
@@ -24,7 +31,7 @@ namespace MMTechApp
             this._user = user;
             //DevicePicker.Items.Add("Device_1");
         }
-         
+        
         protected async override void OnAppearing()
         {
             base.OnAppearing();

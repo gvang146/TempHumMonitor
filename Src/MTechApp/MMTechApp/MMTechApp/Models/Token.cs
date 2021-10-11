@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace MMTechApp.Models
-{
+{   // token to acccess the data stored
     class Token
     {
         public int Id { get; set; }

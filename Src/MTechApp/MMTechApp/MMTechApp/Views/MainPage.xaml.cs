@@ -9,6 +9,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
+// if haven't answered, ask how many service and applications does dematic have?
+
 //PLC programmable logic controller - controlled by PLC
 // WORKFLOW
 // TEMPERATURE SERVICE DEPLOYED ON A RASPBERRY PI
@@ -140,7 +143,7 @@ namespace MMTechApp
             }
             catch (Exception)
             {
-                await DisplayAlert("data", "Datas not found", "Okay");
+                await DisplayAlert("data", "Data not found", "Okay");
             }
          
         }
